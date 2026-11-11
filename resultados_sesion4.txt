@@ -1,0 +1,18 @@
+RESULTADOS - SESIÓN 4: TRADUCCIÓN Y BÚSQUEDA DE PATRONES
+============================================================
+
+ADN de ejemplo : ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG
+Proteína       : MAIVMGR*KGAR*
+
+Motivo    Veces     Posiciones (base 1)
+------------------------------------------------------------
+ATG       2         1, 13
+GCGG      0         No encontrado
+TGA       1         22
+
+Secuencia real: gi|2765658|emb|Z78533.1|CIZ78533 (740 nt)
+Motivo    Veces     Primeras posiciones (base 1)
+------------------------------------------------------------
+ATG       15        43, 158, 206, 225, 277, 287, 326, 344, 470, 508
+GCGG      9         28, 161, 252, 255, 504, 538, 541, 680, 716
+TGA       19        21, 41, 44, 69, 120, 126, 168, 207, 278, 285
