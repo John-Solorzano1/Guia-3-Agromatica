@@ -1,5 +1,5 @@
 # sesion4_traduccion_patrones.py
-# Sesión 4: Análisis con Biopython - Traducción y búsqueda de patrones
+
 
 from Bio import SeqIO  
 from Bio.Seq import Seq  
@@ -16,9 +16,8 @@ def encontrar_motivo(secuencia, motivo):
     return posiciones
 
 
-# ---------------------------------------------------------------
-# PARTE 1: Traducción de una secuencia de ADN a proteína
-# ---------------------------------------------------------------
+# Traducción de una secuencia de ADN a proteína
+
 dna = Seq("ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG")
 proteina = dna.translate()
 
@@ -28,9 +27,8 @@ print("Longitud :", len(dna), "nucleótidos")
 print("Proteína :", proteina)
 print("Hasta el primer codón de parada:", dna.translate(to_stop=True))
 
-# ---------------------------------------------------------------
-# PARTE 2: Búsqueda de motivos genéticos
-# ---------------------------------------------------------------
+# Búsqueda de motivos genéticos
+
 motivos = ["ATG", "GCGG", "TGA"]
 resultados = []
 
@@ -44,9 +42,8 @@ for motivo in motivos:
     resultados.append((motivo, len(posiciones), texto_pos))
     print(f"{motivo:<10}{len(posiciones):<10}{texto_pos}")
 
-# ---------------------------------------------------------------
-# PARTE 3: Aplicación a una secuencia real del archivo FASTA
-# ---------------------------------------------------------------
+# Aplicación a una secuencia real del archivo FASTA
+
 print("-" * 60)
 print("PARTE 3: ANÁLISIS DE UNA SECUENCIA DE ls_orchid.fasta")
 
@@ -69,9 +66,8 @@ for motivo in motivos:
     resultados_real.append((motivo, len(posiciones), texto_pos))
     print(f"{motivo:<10}{len(posiciones):<10}{texto_pos}")
 
-# ---------------------------------------------------------------
-# PARTE 4: Guardar la tabla de resultados en un archivo .txt
-# ---------------------------------------------------------------
+# Guardar la tabla de resultados en un archivo .txt
+
 with open("resultados_sesion4.txt", "w", encoding="utf-8") as archivo:
     archivo.write("RESULTADOS - SESIÓN 4: TRADUCCIÓN Y BÚSQUEDA DE PATRONES\n")
     archivo.write("=" * 60 + "\n\n")
